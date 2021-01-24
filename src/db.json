@@ -1,0 +1,42 @@
+{
+    "Users": [{
+
+        "id":1,
+        "firstName": "Rahul",
+        "lastName": "Gupta",
+        "email": "rahulgupta@gmail.com",
+         "mobile": "7864376543" ,
+         "salary": "150000"                                                                         
+    },
+    {
+
+        "id":2,
+        "firstName": "Virat",
+        "lastName": "Kohli",
+        "email": "viratkohli@gmail.com",
+         "mobile": "7864876543" ,
+         "salary": "150000"                                                                         
+    },
+
+    {
+
+        "id":2,
+        "firstName": "MS",
+        "lastName": "Dhoni",
+        "email": "msdhoni@gmail.com",
+         "mobile": "7864386543" ,
+         "salary": "150000"                                                                         
+    },
+    {
+
+        "id":2,
+        "firstName": "Virendra",
+        "lastName": "Sehwag",
+        "email": "vs@gmail.com",
+         "mobile": "7866376543" ,
+         "salary": "150000"                                                                         
+    }
+
+
+    ]
+}

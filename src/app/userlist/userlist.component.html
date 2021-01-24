@@ -1,0 +1,52 @@
+<!-- <h1>Employee dashboard</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th> User Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.mobile}}</td>
+      <td>{{user.Salary}}</td>
+    </tr>
+    </tbody>
+  </table> -->
+
+<div class="container text-center">
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-hero">
+       
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;
+            Start searching for a hero by id or name or country">
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Hero Name</th>
+          <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let hero of heroes | filter:searchText">
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.country}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>
