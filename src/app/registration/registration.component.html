@@ -1,0 +1,110 @@
+
+<div class="container">
+
+
+
+    <div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card">
+    <header class="card-header">
+        <a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>
+        <h4 class="card-title mt-2">Registration form</h4>
+    </header>
+    <article class="card-body">
+    <form [formGroup] = "registrationForm">
+        <div class="form-row">
+          
+            <div class="col form-group">
+          <label for="name">Name </label>   
+                  <input type="text" class="form-control" id="name" placeholder="" formControlName = "name" >    
+  <div class="invalid-feedback">
+    <div>Name is required</div>
+  </div>
+                </div> <!-- form-group end.// -->
+            <div class="col form-group">
+                <label>Age</label>
+                  <input type="text" class="form-control" placeholder=" " id="age" formControlName = "age"  >
+                  <div class="invalid-feedback">
+                    <div>Age is required</div>
+                  </div>
+                </div>
+        <div class="col form-group">
+                <label>Date of birth</label>
+          <input type="date" id="birthday" name="birthday" formControlName = "dob" >
+         
+        </div><!--form-group end.//-->
+      </div> <!-- form-row end.// -->
+      <div class="form-row">
+        <div class="form-group col">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder=""  name="email" formControlName = "email" >
+            <div class="invalid-feedback">
+              <div>Email is required</div>
+            </div>
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div> <!-- form-group end.// -->
+      <div class="form-group col">
+        <label>Profession</label>
+        <select id="inputState" class="form-control" formControlName = "profession" >
+          <option> Choose...</option>
+            <option>Employed</option>
+            <option selected="">Student</option>
+        </select>
+        <div class="invalid-feedback">
+          <div>Profession is required</div>
+        </div>
+      </div>
+    </div>
+      
+    
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Country</label>
+              <input type="text" class="form-control" formControlName = "country">
+              <div class="invalid-feedback">
+                <div>Required</div>
+              </div>
+            </div> <!-- form-group end.// -->
+            <div class="form-group col-md-6">
+              <label>No. of guest</label>
+              <select id="inputState" class="form-control" formControlName = "guests" >
+                <option> Choose...</option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option selected="">2</option>
+                  
+              </select>
+              <div class="invalid-feedback">
+                <div>No. of guest required</div>
+              </div>
+            </div> <!-- form-group end.// -->
+        </div> <!-- form-row.// -->
+        <div class="form-group">
+        <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Address</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" formControlName = "address"></textarea>
+        <div class="invalid-feedback">
+          <div>/Address is required</div>
+        </div>
+      </div>
+        </div> <!-- form-group end.// -->  
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" (click) = "registerUser()"> Register  </button>
+        </div> <!-- form-group// -->      
+        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+       <div *ngIf="responseMessage">
+        <p class="message">{{responseMessage}}</p>
+      </div>
+    </form>
+    </article> <!-- card-body end .// -->
+    <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+    </div> <!-- card.// -->
+    </div> <!-- col.//-->
+    
+    </div> <!-- row.//-->
+    
+    
+    </div> 
+    <!--container end.//-->

@@ -1,6 +1,6 @@
 
 
-<button type="button" class="btn btn-primary" (click)="goToSecondPage()" routerLink="/app-userlist">Go to Next page</button>
+<!-- <button type="button" class="btn btn-primary" (click)="goToSecondPage()" routerLink="/app-userlist">Go to Next page</button> -->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -8,96 +8,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
-
-<div class="container">
-
-
-
-<div class="row justify-content-center">
-<div class="col-md-6">
-<div class="card">
-<header class="card-header">
-	<a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>
-	<h4 class="card-title mt-2">Resgistration form</h4>
-</header>
-<article class="card-body">
-<form>
-	<div class="form-row">
-		<div class="col form-group">
-      <label for="name">Name </label>   
-		  	<input type="text" class="form-control" id="name" placeholder="" [(ngModel)]="model.name"  name="name">{{model.name}}
-		</div> <!-- form-group end.// -->
-		<div class="col form-group">
-			<label>Age</label>
-		  	<input type="text" class="form-control" placeholder=" " id="age" name="age" >
-    </div>
-    <div class="col form-group">
-			<label>Date of birth</label>
-      <input type="date" id="birthday" name="birthday">
-    </div>
-     <!--form-group end.//-->
-  </div> <!-- form-row end.// -->
-  <div class="form-row">
-	<div class="form-group col">
-		<label>Email address</label>
-		<input type="email" class="form-control" placeholder=""  name="email">
-		<small class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div> <!-- form-group end.// -->
-  <div class="form-group col">
-    <label>Profession</label>
-    <select id="inputState" class="form-control">
-      <option> Choose...</option>
-        <option>Employed</option>
-        <option selected="">Student</option>
-    </select>
-  </div>
-</div>
-  
-
-	<div class="form-row">
-		<div class="form-group col-md-6">
-		  <label>Locality</label>
-		  <input type="text" class="form-control">
-		</div> <!-- form-group end.// -->
-		<div class="form-group col-md-6">
-		  <label>No. of guest</label>
-		  <select id="inputState" class="form-control">
-		    <option> Choose...</option>
-		      <option>0</option>
-		      <option>1</option>
-		      <option selected="">2</option>
-		      
-		  </select>
-		</div> <!-- form-group end.// -->
-	</div> <!-- form-row.// -->
-	<div class="form-group">
-    <div class="input-group">
-    <div class="input-group-prepend">
-      <span class="input-group-text">Address</span>
-    </div>
-    <textarea class="form-control" aria-label="With textarea"></textarea>
-  </div>
-	</div> <!-- form-group end.// -->  
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block" > Register  </button>
-    </div> <!-- form-group// -->      
-    <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
-</form>
-</article> <!-- card-body end .// -->
-<div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
-</div> <!-- card.// -->
-</div> <!-- col.//-->
-
-</div> <!-- row.//-->
-
-
-</div> 
-<!--container end.//-->
-
-
-
-
+<app-header></app-header>
 <router-outlet></router-outlet>
 
   

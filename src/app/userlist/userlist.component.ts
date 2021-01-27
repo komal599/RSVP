@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 //import { Users } from 'src/app/users';
 //import { TabledataServiceService } from 'src/app/tabledata-service.service';
 
@@ -8,30 +9,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userlist.component.scss']
 })
 export class UserlistComponent implements OnInit {
+   public userArray: any;
+   public filteredArray: any;
+   public serarchString: String = '';
+  
 
+   constructor( private dataService: DataService){
 
-  // users: Users[] = [];
-  // constructor(private tableData: TabledataServiceService) { }
-  searchText: any;
-    heroes = [
-      { id: 11, name: 'Mr. Nice', country: 'India' },
-      { id: 12, name: 'Narco' , country: 'USA'},
-      { id: 13, name: 'Bombasto' , country: 'UK'},
-      { id: 14, name: 'Celeritas' , country: 'Canada' },
-      { id: 15, name: 'Magneta' , country: 'Russia'},
-      { id: 16, name: 'RubberMan' , country: 'China'},
-      { id: 17, name: 'Dynama' , country: 'Germany'},
-      { id: 18, name: 'Dr IQ' , country: 'Hong Kong'},
-      { id: 19, name: 'Magma' , country: 'South Africa'},
-      { id: 20, name: 'Tornado' , country: 'Sri Lanka'}
-    ];
+   }
 
   ngOnInit(): void {
-
-  //   this.tableData.getUsers().subscribe((response: any)=>{
-  //     this.users = response;
-  //   });
-  // }
-
+    this. userArray = this.dataService.getUserData();
+    this.filteredArray = this.userArray;
  }
+filterArray(){
+  this.filteredArray = this.userArray.filter((data: any)=>{
+      if( (data.name != undefined && data.name.toLowerCase().includes(this.serarchString)) || 
+      ( data.country != undefined && data.country.toLowerCase().includes(this.serarchString)))
+        return data;
+  })
+}
+
+filterDataOnDebounce(){
+  let context = this;
+  let debounceTimer;
+  clearInterval(debounceTimer);
+  debounceTimer = setTimeout(()=>{
+    this.filterArray();
+  }, 2000);
+}
+
 }

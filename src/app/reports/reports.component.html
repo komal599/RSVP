@@ -1,0 +1,22 @@
+<ngx-charts-bar-vertical 
+    [view]="[600,300]"
+    [results]="professionalStudentCount"
+    [xAxisLabel]="'Country'"
+    [legendTitle]="'Country wise Hero'"
+    [yAxisLabel]="'Country wise hero number'"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="true">
+</ngx-charts-bar-vertical>
+
+
+<ngx-charts-pie-chart 
+    [results]="peopleByAgeRange"
+    [legend]="true"
+    [legendTitle]="'Hero Report'" 
+    [view]="[1000,300]"
+    [labels]="true" >
+</ngx-charts-pie-chart>
